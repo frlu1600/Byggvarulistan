@@ -1,0 +1,187 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="navigationsbtn">
+    <h4 style="color:white;">För övrig navigering på webbplatsen <a style="color:yellow;" asp-area="" asp-controller="Home" asp-action="Navigation">klicka här</a></h4>
+
+</div>
+<div class="infotext">
+    <h4 style="color:black"> <strong>Välkommen till byggvarulistan </strong> </h4>
+    <p style="color:black">
+        Vi på Byggvarulistan brinner för byggvaror. Vi är entusiastiska Gör-Det-Självare som vill bringa lite ordning i utbudet av byggvaror.
+        Byggvarulistan är en oberoende prisjämförelsesida för den svenska Gör-Det-Själv-marknaden.
+        Du hittar e-handlare och fysiska byggvaruhus hos oss och du kan söka efter såväl kvalitets- som certifieringsmärkningar.
+
+        <Br /> <br />Börja med att skriva in ditt postnummer, leta efter dina byggvaror, välj kvalitet och lägg till dem till din lista.
+        Matcha dina produkter under "Jämför butiker och priser" och gå vidare med det varuhus du tycker stämmer bäst med dina val.
+    </p>
+</div>
+<input class="postnr1" type="text" value="Fyll i ditt postnummer här" id="myInputpost" onblur="if (this.value == '') {this.value = 'Fyll i ditt postnummer här';}"
+       onfocus="if (this.value == 'Fyll i ditt postnummer här') {this.value = '';}">
+<button class="postnr1">Sök</button>
+<br />
+<br />
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/images/BliInspirerad.png" style="width: 85%; height: 550px;" />
+            <div class="carousel-caption" role="option">
+                @*<button type="button" class="btn btn-info">Läs mer</button>*@
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/Byggvaror.png" style="width: 85%; height: 550px;" />
+            <div class="carousel-caption" role="option">
+                @*<button type="button" class="btn btn-info">Läs mer</button>*@
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/StaketvaljarenStart.jpeg" style="width: %; height: 550px;" />
+            <div class="carousel-caption" role="option">
+                @*<button type="button" class="btn btn-info">Läs mer</button>*@
+                <h1 style="color:black;"><strong>Staketplaneraren</strong></h1>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/VaxthusStartStart.jpeg" style="width: 85%; height: 550px;" />
+            <div class="carousel-caption" role="option">
+                @*<button type="button" class="btn btn-info">Läs mer</button>*@
+                <h1 style="color:black;"><strong>Kurs i Växthusbygge!</strong></h1>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="categoriers">
+    <h4 class="categorititle">Kategorier</h4>
+    <div id="topnav2">
+        <ul>
+            <li class="infast">
+                <a href="#">Infästning och beslag</a><span></span>
+                <ul>
+                    <li><a href="#">Skruv</a></li>
+                    <li><a href="#">Byggbeslag</a></li>
+                    <li><a href="#">Plugg och expander</a></li>
+                    <li><a href="#">Spik och dyckert</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Isolering & skivor</a><span></span>
+                <ul>
+                    <li><a href="#">MDF och panelskivor</a></li>
+                    <li><a href="#">Byggskivor</a></li>
+                    <li><a href="#">Isolering</a></li>
+                    <li><a href="#">Vindpapp och byggplast</a></li>
+                    <li><a href="#">Gipsskivor</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">El</a><span></span>
+                <ul>
+                    <li><a href="#">Batterier</a></li>
+                    <li><a href="#">Skarvsladd</a></li>
+                    <li><a href="#">Uttag, brytare & stickproppar</a></li>
+                    <li><a href="#">Belysning</a></li>
+                    <li><a href="#">installationsel</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Tak</a><span></span>
+                <ul>
+                    <li><a href="#">Takavvattning</a></li>
+                    <li><a href="#">Takpapp</a></li>
+                    <li><a href="#">Takpannor och plasttak</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Grund och gjutning</a><span></span>
+                <ul>
+                    <li><a href="#">Kakel och klinker</a></li>
+                    <li><a href="#">Mursten och tegel</a></li>
+                    <li><a href="#">Mura och gjuta</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Stegar</a><span></span>
+                <ul>
+                    <li><a href="#">Arbetsbockar</a></li>
+                    <li><a href="#">Stegar</a></li>
+                    <li><a href="#">Utskjutsstege</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Bodar/uthus</a><span></span>
+                <ul>
+                    <li><a href="#">Förvaringsbod</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">VVS</a><span></span>
+                <ul>
+                    <li><a href="#">Rör & kopplingar</a></li>
+                    <li><a href="#">Ventilation</a></li>
+                    <li><a href="#">Dränering & fuktsolering</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Tryckt virke och markprodukter</a><span></span>
+                <ul>
+                    <li><a href="#">Impregnerat virke</a></li>
+                    <li><a href="#">Sten, plattor & markduk</a></li>
+                    <li><a href="#">Dekorsten och bärlager</a></li>
+                    <li><a href="#">Murstenar och murstenssystem</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Dörrar och fönster</a><span></span>
+                <ul>
+                    <li><a href="#">Fönster</a></li>
+                    <li><a href="#">Garagerportar</a></li>
+                    <li><a href="#">Dörrar</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Inredningsmaterial och Färg</a><span></span>
+                <ul>
+                    <li><a href="#">Olijor mm</a></li>
+                    <li><a href="#">Spackel mm</a></li>
+                    <li><a href="#">interiör trä</a></li>
+                    <li><a href="#">Färg</a></li>
+                    <li><a href="#">Säckar och påsar</a></li>
+                    <li><a href="#">Lim och tejp</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Golv och mattor</a><span></span>
+                <ul>
+                    <li><a href="#">Stengolv</a></li>
+                    <li><a href="#">Laminatgolv</a></li>
+                    <li><a href="#">Fanérgolv</a></li>
+                    <li><a href="#">Massiva golv</a></li>
+                    <li><a href="#">Plastgolv</a></li>
+                    <li><a href="#">Prakettgolv</a></li>
+                    <li><a href="#">Övrigt golv</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="space">
+
+
+    </div>
+</div>

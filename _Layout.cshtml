@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>@ViewData["Title"] - Byggvarulistan</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-head">
+            <a asp-area="" asp-controller="Home" asp-action="Index" style="color:#e1e1ea;" class="title"> <strong style="color:yellow;">B</strong>yggvarulistan </a> <br />
+            <p><strong>Sveriges största söktjänst för byggvaror</strong></p>
+        </div>
+        <div class="btn-group">
+            <button type="button" value="submit" onclick="location.href='@Url.Action("cart", "Home")'">Kundkorg</button> 
+            <button type="button" value="submit">Bli medlem</button> 
+            <button type="button" value="submit">Logga in</button> 
+        </div>
+        <div class="topnav" id="myTopnav">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">Om oss</a></li>
+                    <li class="byggvaror">
+                        <a asp-area="" asp-controller="Home" asp-action="Inspiration">Inspriation</a>
+                        <ul>
+                            <li><a href="#">Byggprojekt</a></li>
+                            <li><a href="#">Planeringsverktyg</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Guider">Guider</a></li>
+                            <li><a href="#">Teman</a></li>
+                            <li><a href="#">Blogg</a></li>
+                            <li><a href="#">Nyhetsbrev</a></li>
+                        </ul>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Buildproject">Byggprojekt</a></li>
+                    <li class="byggvaror">
+                        <a asp-area="" asp-controller="Home" asp-action="Buildingproducts">Byggvaror</a>
+                        <ul>
+                            <li><a href="#">Infästning & Beslag</a></li>
+                            <li><a href="#">Isolering & Skrivor</a></li>
+                            <li><a href="#">Grund & Gjutning</a></li>
+                            <li><a href="#">Tryckt virke & Markprodukter</a></li>
+                            <li><a href="#">Tak</a></li>
+                            <li><a href="#">Dörrar & Fönster</a></li>
+                            <li><a href="#">El</a></li>
+                            <li><a href="#">Inredningsmaterial & Färg</a></li>
+                            <li><a href="#">VVS</a></li>
+                            <li><a href="#">Golv & Mattor</a></li>
+                            <li><a href="#">Elradiatorer</a></li>
+                            <li><a href="#">Stegar</a></li>
+                            <li><a href="#">Bodar & Uthus</a></li>
+                            <li><a href="#">Kompressorer</a></li>
+                        </ul>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Start</a></li>
+                </ul>
+        </div>
+        <input class="sok2" type="text" value="Sök efter produkter eller kategorier" id="myInputpost" onblur="if (this.value == '') {this.value = 'Sök efter produkter eller kategorier';}"
+               onfocus="if (this.value == 'Sök efter produkter eller kategorier') {this.value = '';}">
+        <button class="sokbtn">Sök</button>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+    <footer>
+        <div class="footer-wrapper">
+
+            <div class="newsletters">
+                <h4>
+                    <strong>Nyhetsbrev</strong>
+                </h4>
+                <h4> Ja tack, jag vill gärna ha nyhetsbrev från Byggvarulistan!</h4>
+                <input type="text" value="Email" id="myInputpost" onblur="if (this.value == 'Email') {this.value = '';}"
+                       onfocus="if (this.value == 'Email') {this.value = '';}">
+
+            </div>
+            <div class="cookies">
+                <h3> <strong> Friskrivning och cookies</strong></h3>
+            </div>
+
+            <div class="socialmedia">
+                <h4>
+                    <strong>Dela Byggvarulistan.se med andra via sociala medier</strong>
+                </h4>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+            </div>
+        </div>
+        <div><p><strong> 2016 - Byggvarulistan.se i Sverige AB</strong></p></div>
+    </footer>
+</body>
+</html>
